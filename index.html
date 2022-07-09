@@ -46,7 +46,8 @@
         <section class="section1 section">
             <div class="container">
                 <h1 class="h1">Эффективные решения <br> для вашего бизнеса</h1>
-                <button class="button1" type="button">Заказать услугу</button>
+                <button class="button1" type="button" data-modal-open>Заказать услугу</button>
+                      
             </div>
         </section>
         <!-- section2 -->
@@ -100,9 +101,24 @@
                 <!-- Чем мы занимаемся -->
                 <h2 class="h2-experience">Чем мы занимаемся</h2>
                 <ul class="list-foto">
-                    <li class="item"><img src="./images/photo.jpg" alt="Фото" width="370"></li>
-                    <li class="item"><img src="./images/photo1.jpg" alt="Фото1" width="370"></li>
-                    <li class="item"><img src="./images/photo2.jpg" alt="Фото2" width="370"></li>
+                    <li class="item">
+                            <img class="img" src="./images/photo.jpg" alt="Фото" width="370">
+                            <div class="thumb-text">
+                                <p class="text">Десктопные приложения</p>
+                            </div>
+                    </li>
+                    <li class="item">
+                            <img class="img" src="./images/photo1.jpg" alt="Фото1" width="370">
+                            <div class="thumb-text">
+                                <p class="text">Мобильные приложения</p>
+                            </div>
+                    </li>
+                    <li class="item">
+                            <img class="img" src="./images/photo2.jpg" alt="Фото2" width="370">
+                            <div class="thumb-text">
+                                <p class="text">Дизайнерские решения</p>
+                            </div>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -365,6 +381,16 @@
             </div>
         </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button class="button-close" type="button" data-modal-close>
+                <svg class="icon-close" width="11px" height="11px" aria-hidden="true">
+                    <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
