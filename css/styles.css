@@ -104,13 +104,11 @@ body {
     display: block;
     position: relative;
     color: var(--secondary-text-color);
-    
+    transition: transform 250ms var(--timing-function);
 }
 .site-nav .link:hover,
 .site-nav .link:focus {  
-      
     color: var(--accent-color);
-    transition: transform 250ms var(--timing-function);
 }
 .site-nav .link.current {
     color: var(--accent-color);
@@ -132,7 +130,6 @@ body {
 }
 .site-nav .link:hover::after {
     transform: scaleX(1);
-    transition: transform 250ms var(--timing-function);
 }
 
 .site-nav .link.current::after {
@@ -154,12 +151,11 @@ body {
     margin-bottom: 0;
     padding: 0;
     display: flex;
-    /* list-style-type: none; */
+    transition: transform 250ms var(--timing-function);
 }
 .list-force :hover,
 .list-force :focus {
     color: var(--accent-color);
-    transition: transform 250ms var(--timing-function);
 
 }
 .list-force .link,
@@ -168,6 +164,8 @@ body {
     padding: 0;
     padding-top: 32px;
     padding-bottom: 32px;
+    transition: transform 250ms var(--timing-function);
+
 }
 
 .list-force .item {
@@ -181,12 +179,10 @@ margin-right: 0;
     display: inline-block;
     margin-right: 10px;
     fill: var(--primary-text-color)
-    
 }
 .mail-header:hover .icon-mail,
 .mail-header:focus .icon-mail {
     fill: var(--accent-color);
-    transition: transform 250ms var(--timing-function);
 }
 .list-force .icon-phone {
     display: inline-block;
@@ -222,14 +218,12 @@ margin-right: 0;
     align-items: center;
     justify-content: center;
     color: var(--primary-text-color);
-    /* text-decoration: none; */
 }
 .tel {
     display: flex;
     align-items: center;
     justify-content: center;    
     color: var(--primary-text-color);
-    /* text-decoration: none; */
 }
 .section {
     padding-top: 94px;
@@ -500,23 +494,23 @@ margin-right: 0;
     width: 44px;
     height: 44px;
     position: relative;
+    transition: transform 250ms var(--timing-function);
 }
 .list-team .menu-link:hover,
 .list-team .menu-link:focus {
     border: 1px solid var(--accent-color);
     border-radius: 50%;
     background-color: var(--accent-color);
-    transition: transform 250ms var(--timing-function);
 }
 
 
 .link-icon {
     fill: var(--icon-primary-fill);
+    transition: transform 250ms var(--timing-function);
 }
 .list-team .menu-link:hover .link-icon,
 .list-team .menu-link:focus .link-icon {
     fill: var(--third-text-color);
-    transition: transform 250ms var(--timing-function);
 }
 
 /* section5 */
@@ -561,22 +555,22 @@ margin-right: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 250ms var(--timing-function);
 }
 
 .list-client .company:hover,
 .list-client .company:focus { 
     border: 1px solid var(--accent-color);
-    transition: transform 250ms var(--timing-function);
 }
 
 .list-client .icon {
     fill: var(--icon-primary-fill);
+    transition: transform 250ms var(--timing-function);
 }
 
 .list-client .company:hover .icon,
 .list-client .company:focus .icon {   
     fill: var(--accent-color);
-    transition: transform 250ms var(--timing-function);
 }
 /* footer */
 .footer {
@@ -609,40 +603,37 @@ margin-right: 0;
 }
 .address {
     line-height: 1.71;
-    color: var(--third-text-color);   
+    color: var(--third-text-color); 
+    transition: transform 250ms var(--timing-function);
 }
 .address:hover {
     color:var(--accent-color);
-    transition: transform 250ms var(--timing-function);
 }
 .address:focus {
     color: var(--accent-color);
-    transition: transform 250ms var(--timing-function);
 }
 .mail-footer {
     font-weight: 400;
     line-height: 1.71;
     color: var(--fours-text-color);
+    transition: transform 250ms var(--timing-function);
 }
 .mail-footer:hover {
     color: var(--accent-color);
-    transition: transform 250ms var(--timing-function);
 }
 .mail-footer:focus {
     color: var(--accent-color);
-    transition: transform 250ms var(--timing-function);
 }
 .tel-footer {
     line-height: 1.71;
     color: var(--fours-text-color);
+    transition: transform 250ms var(--timing-function);
 }
 .tel-footer:hover {
     color: var(--accent-color);
-    transition: transform 250ms var(--timing-function);
 }
 .tel-footer:focus {
     color: var(--accent-color);
-    transition: transform 250ms var(--timing-function);
 }
 .h3-foot {
     margin-top: 12px;
@@ -688,21 +679,21 @@ margin-right: 0;
     border-radius: 50%;
     position: relative;
     background: var(--icon-background-color);
+    transition: transform 250ms var(--timing-function);
 }
 .social-foot .list .menu-link:hover,
 .social-foot .list .menu-link:focus {
     border: 1px solid var(--accent-color);
     border-radius: 50%;
     background-color: var(--accent-color);
-    transition: transform 250ms var(--timing-function);
 }
 .social-foot .link-icon {
     fill: var(--third-text-color);
+    transition: transform 250ms var(--timing-function);
 }
 .list-team .menu-link:hover .link-icon,
 .list-team .menu-link:focus .link-icon {
     fill: var(--third-text-color);
-    transition: transform 250ms var(--timing-function);
 }
 
 /* Portfolio */
@@ -750,6 +741,7 @@ margin-right: 0;
     font-size: 16px;
     line-height: 1.63;
     border: none;
+    transition: transform 250ms var(--timing-function);
 }
 
 .button2:hover,
@@ -758,13 +750,11 @@ margin-right: 0;
     background-color: var(--accent-color);
     color: var(--third-text-color);
     cursor: pointer;
-    transition: transform 250ms var(--timing-function);
 }
 
 .button2:focus {
     background-color: var(--accent-color);
     color: var(--third-text-color);
-    transition: transform 250ms var(--timing-function);
 }
 .gallery {
     margin: 0;
@@ -780,11 +770,11 @@ margin-right: 0;
     width: 370px;
     margin-bottom: 30px;
     margin-right: 30px;
+    transition: transform 250ms var(--timing-function);
 }
 .gallery .item:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
     cursor: pointer;
-    transition: transform 250ms var(--timing-function);
 }
 .gallery .item:nth-child(3n) {
     margin-right: 0;
