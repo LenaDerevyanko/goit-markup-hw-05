@@ -51,7 +51,7 @@ p {
 --border-btm-scnd-clr: #EEEEEE;
 --icon-primary-fill: #AFB1B8;
 --icon-background-color: rgba(255, 255, 255, 0.1);
---background-colon-portfolio: rgba(33, 150, 243, 0.9);
+--background-color-portfolio: rgba(33, 150, 243, 0.9);
 --background-color-studio: rgba(47, 48, 58, 0.8);
 --modal-background-color: rgba(0, 0, 0, 0.2);
 --modal-backgroud-color-wind: #ffffff;
@@ -99,12 +99,13 @@ body {
     align-items: center;
     padding: 0;
     justify-content: center;
+    transition-property: color;
+    
 }
 .site-nav .link {
     display: block;
     position: relative;
     color: var(--secondary-text-color);
-    transition: transform 250ms var(--timing-function);
 }
 .site-nav .link:hover,
 .site-nav .link:focus {  
@@ -125,8 +126,9 @@ body {
     border-radius: 2px;
     
     transform: scaleX(0);
-    transition: transform 250ms var(--timing-function);
-    background-color: var(--accent-color);
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing-function);    background-color: var(--accent-color);
 }
 .site-nav .link:hover::after {
     transform: scaleX(1);
@@ -151,7 +153,6 @@ body {
     margin-bottom: 0;
     padding: 0;
     display: flex;
-    transition: transform 250ms var(--timing-function);
 }
 .list-force :hover,
 .list-force :focus {
@@ -164,7 +165,9 @@ body {
     padding: 0;
     padding-top: 32px;
     padding-bottom: 32px;
-    transition: transform 250ms var(--timing-function);
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing-function);
 
 }
 
@@ -178,8 +181,11 @@ margin-right: 0;
 .list-force .icon-mail {
     display: inline-block;
     margin-right: 10px;
-    fill: var(--primary-text-color)
-}
+    fill: var(--primary-text-color);
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing-function);
+    }
 .mail-header:hover .icon-mail,
 .mail-header:focus .icon-mail {
     fill: var(--accent-color);
@@ -187,7 +193,10 @@ margin-right: 0;
 .list-force .icon-phone {
     display: inline-block;
     margin-right: 10px;
-    fill: var(--primary-text-color)
+    fill: var(--primary-text-color);
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing-function);
 }
 .tel:hover .icon-phone,
 .tel:focus .icon-phone {
@@ -276,6 +285,7 @@ margin-right: 0;
     display: block;
     cursor: pointer;
     border: none;
+    
 }
 .backdrop {
     position: fixed;
@@ -285,6 +295,8 @@ margin-right: 0;
     height: 100%;
     background-color: var(--modal-background-color);
     opacity: 1;
+    transition: opacity 250ms var(--timing-function),
+                visibility 250ms var(--timing-function);
 }
 
 .backdrop.is-hidden {
@@ -293,7 +305,7 @@ margin-right: 0;
     pointer-events: none;
 }
 .backdrop .is-hidden .modal {
-    transform: translate(-50%, -50%) scale(0.9);
+    transform: translate(-50%, -50%) scale(0);
 }
 .modal {
     position: absolute;
@@ -307,7 +319,6 @@ margin-right: 0;
     box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%), 0px 2px 1px rgb(0 0 0 / 20%);
     border-radius: 4px;
     transform: translate(-50%, -50%) scale(1);
-    transition: transform 250ms var(--timing-function);
 }
 
 .modal .button-close {
@@ -486,7 +497,8 @@ margin-right: 0;
 .list-team .menu-link {
     display: flex;
     align-items: center;
-    border: none;
+    border: 1px solid var(--primary-background-color);
+    border-radius: 50%;
     padding: 0;
     padding: 12px 12px;
     background-color: var(--primary-background-color);
@@ -494,7 +506,9 @@ margin-right: 0;
     width: 44px;
     height: 44px;
     position: relative;
-    transition: transform 250ms var(--timing-function);
+    transition: fill 250ms var(--timing-function), 
+                background-color 250ms var(--timing-function),
+                border 250ms var(--timing-function);
 }
 .list-team .menu-link:hover,
 .list-team .menu-link:focus {
@@ -506,7 +520,7 @@ margin-right: 0;
 
 .link-icon {
     fill: var(--icon-primary-fill);
-    transition: transform 250ms var(--timing-function);
+    transition: fill 250ms var(--timing-function);
 }
 .list-team .menu-link:hover .link-icon,
 .list-team .menu-link:focus .link-icon {
@@ -550,12 +564,14 @@ margin-right: 0;
     width: 170px;
     height: 92px;
     cursor: pointer;
-}
+    transition: fill 250ms var(--timing-function),
+            background-color 250ms var(--timing-function),
+            border 250ms var(--timing-function);
+        }
 .list-client .company {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 250ms var(--timing-function);
 }
 
 .list-client .company:hover,
@@ -565,7 +581,7 @@ margin-right: 0;
 
 .list-client .icon {
     fill: var(--icon-primary-fill);
-    transition: transform 250ms var(--timing-function);
+    transition: fill 250ms var(--timing-function);
 }
 
 .list-client .company:hover .icon,
@@ -604,7 +620,7 @@ margin-right: 0;
 .address {
     line-height: 1.71;
     color: var(--third-text-color); 
-    transition: transform 250ms var(--timing-function);
+    transition: color 250ms var(--timing-function);
 }
 .address:hover {
     color:var(--accent-color);
@@ -616,7 +632,7 @@ margin-right: 0;
     font-weight: 400;
     line-height: 1.71;
     color: var(--fours-text-color);
-    transition: transform 250ms var(--timing-function);
+    transition: color 250ms var(--timing-function);
 }
 .mail-footer:hover {
     color: var(--accent-color);
@@ -627,7 +643,7 @@ margin-right: 0;
 .tel-footer {
     line-height: 1.71;
     color: var(--fours-text-color);
-    transition: transform 250ms var(--timing-function);
+    transition: color 250ms var(--timing-function);
 }
 .tel-footer:hover {
     color: var(--accent-color);
@@ -670,7 +686,7 @@ margin-right: 0;
 .social-foot .list .menu-link {
     display: flex;
     align-items: center;
-    border: none;
+    border: 1px solid var(--third-background-color);
     padding: 0;
     padding: 12px 12px;
     cursor: pointer;
@@ -679,8 +695,10 @@ margin-right: 0;
     border-radius: 50%;
     position: relative;
     background: var(--icon-background-color);
-    transition: transform 250ms var(--timing-function);
-}
+    transition: fill 250ms var(--timing-function),
+            background-color 250ms var(--timing-function),
+            border 250ms var(--timing-function);
+        }
 .social-foot .list .menu-link:hover,
 .social-foot .list .menu-link:focus {
     border: 1px solid var(--accent-color);
@@ -689,7 +707,6 @@ margin-right: 0;
 }
 .social-foot .link-icon {
     fill: var(--third-text-color);
-    transition: transform 250ms var(--timing-function);
 }
 .list-team .menu-link:hover .link-icon,
 .list-team .menu-link:focus .link-icon {
@@ -741,9 +758,10 @@ margin-right: 0;
     font-size: 16px;
     line-height: 1.63;
     border: none;
-    transition: transform 250ms var(--timing-function);
+    transition: fill 250ms var(--timing-function),
+                color 250ms var(--timing-function),
+                background-color 250ms var(--timing-function);
 }
-
 .button2:hover,
 .button2:focus {
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -770,7 +788,6 @@ margin-right: 0;
     width: 370px;
     margin-bottom: 30px;
     margin-right: 30px;
-    transition: transform 250ms var(--timing-function);
 }
 .gallery .item:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -800,7 +817,6 @@ margin-right: 0;
 }
 .gallery .item:hover .text-overlay {
     transform: translateY(0);
-    transition: transform 250ms var(--timing-function);
 }
 .text-overlay {
     position: absolute;
@@ -814,9 +830,11 @@ margin-right: 0;
     line-height: 1.56;
     letter-spacing: 0.03em;
     color: var(--third-text-color);
-    background-color: var(--background-colon-portfolio);
+    background-color: var(--background-color-portfolio);
     transform: translateY(100%);
-    transition: transform 250ms var(--timing-function);
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .projects {
     margin-bottom: 4px;
@@ -837,5 +855,8 @@ margin-right: 0;
     letter-spacing: 0.03em;
     color: var(--primary-text-color);
 }
-    
-
+.button-close {
+    transition-property: transform;
+        transition-duration: 2500ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
